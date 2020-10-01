@@ -10,10 +10,10 @@
 }
 
 
-body{
-  width: 60%;
-  margin-left: 20%;
-}
+/*body{
+  //width: 60%;
+  //margin-left: 20%;
+}*/
 
 p{
   font-size: 1.6em;
@@ -24,7 +24,14 @@ h1{
   font-size: 2em;
 }
 
+h2{
+  font-size: 1.8em;
+}
+
 //navigation bar
+.navShadow{
+  box-shadow: 0px 20px 20px -25px #172731;
+}
 
 nav{
   display: flex;
@@ -32,8 +39,10 @@ nav{
   align-items: center;
   min-height: 12vh;
   background-color: #f7f7f7;
-  box-shadow: 0px 20px 20px -25px #172731;
+  //box-shadow: 0px 20px 20px -25px #172731;
   font-weight: bold;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .logo{
@@ -59,8 +68,17 @@ nav{
   margin-right: 0%;
 }
 
+.navLinks a{
+  color: #172731;
+}
+
 .navLinks a:hover{
   border-top: #921b1e 6px solid;
+}
+
+.navLinks a:active{
+  color: #921b1e;
+  border: none;
 }
 
 @media screen and (max-width:1020px){
@@ -136,9 +154,11 @@ hero{
   column-gap: 1em;
   justify-content: space-between;
   margin-top: 8vh;
+  width: 60%;
+  margin-left: 20%;
 }
 
-h1{
+hero h1{
   color: #286f76;
   animation: fadeInLeft .5s ease-in both;
 }
@@ -195,6 +215,7 @@ span:before{
 
 .heroImage img{
   width: 50vh;
+  position: relative;
   animation: fadeInRight 1s ease-in both;
 }
 
@@ -226,5 +247,73 @@ span:before{
   }
   100%{
       opacity: 1;
+  }
+}
+
+
+@media screen and (max-width:768px){
+  .heroImage {
+    display: none;
+  }
+}
+
+//Portfolio Section
+
+.port{
+  background-color: #172731;
+  margin-top: 8vh;
+  padding-top: 4vh;
+  margin-bottom: 8vh;
+  padding-bottom: 8vh;
+}
+
+h2{
+  text-align: center;
+  margin: 1em;
+  background-color: #172731;
+  color: #f7f7f7;
+}
+
+.sticker-cont{
+  list-style: none;
+  columns: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 60%;
+  margin-left: 20%;
+  overflow: hidden;
+  background-color: #172731;
+}
+
+.sticker{
+  text-align: center;
+  width: 18vw;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sticker img{
+  height:30vh;
+  width:auto
+}
+
+.sticker p{
+  padding: .5em;
+}
+
+@media screen and (max-width:900px){
+  .sticker-cont {
+    display: flex;
+    flex-direction: column;
+  }
+  .sticker{
+    width: 100%;
+    padding-top: 10%;
+    background-color: #172731;
+  }
+  .sticker img{
+    width: 100%;
+    height: auto;
   }
 }
